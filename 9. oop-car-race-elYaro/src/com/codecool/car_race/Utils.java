@@ -97,7 +97,34 @@ public class Utils {
     }
 
 
-
+    /**
+     * Method generates the random number frm 5 to 50.
+     * This random number will be deducted from normal speed.
+     * @author: elYaro
+     * @return int (speed which will be deducted from actial speed)
+     */
+    public static int calculateMotocyclesSpeedTOSlowDownWhileRaining(){
+        Random random = new Random();
+        int randomNumber = random.nextInt(46) + 5;
+        return randomNumber;
     }
+
+
+
+
+
+    public static int motocycleNumber = 0;
+    /**
+     * Method creates a name as a string combined from two words "Motocycle" and number from 1 to 10.
+     * @author: elYaro
+     * @return String name fo motocycle
+     */
+    public static String createNameForMotocycle(){
+        motocycleNumber ++;
+        String nameForMotocycle =  "Motocycle " + String.valueOf(motocycleNumber);
+        return nameForMotocycle;
+    }
+
+}
 
 
