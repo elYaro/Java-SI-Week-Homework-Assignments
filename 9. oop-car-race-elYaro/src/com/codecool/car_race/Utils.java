@@ -63,6 +63,22 @@ public class Utils {
     }
 
 
+    /**
+     *  this method generates random number from 1 to 100 and based on the result decides id the Truck breakes down.
+     *  there is 5 % chance for this to happen
+     *  @author: elYaro
+     * @return boolean
+     */
+    public static boolean checkIfTruckBreakesDown(){
+        Random random = new Random();
+        int randomNumber = random.nextInt(100) +1;
+        if (randomNumber <= 5){
+            System.out.println("Truck breakes down and STOPS for 2 rounds");
+            return true;
+        } else {return false;}
+    }
+
+
 
     /**
      * this method generates random number from 1 to 10 and based on the result returns truwe or false if there is a rain.
