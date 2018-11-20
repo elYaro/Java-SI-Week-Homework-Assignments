@@ -15,7 +15,7 @@ public class Utils {
      * @input: txt file
      * @return: ArrayList of Strings with names
      */
-    ArrayList<String> getNamesForCar() {
+    public static ArrayList<String> getNamesForCar() {
         File file = new File("/Users/Yaro/repository/Java/Java SI Assignments/9. oop-car-race-elYaro/carsNames.txt");
         ArrayList <String> listOfCarNames = new ArrayList<>();
         try {
@@ -38,7 +38,7 @@ public class Utils {
      *@author: elYaro
      *@return: String (two words in one string)
      */
-    void createNameForCar() {
+    public static void createNameForCar() {
         String carName = "";
         Random random = new Random();
         int numberOfNamesInTxtFile = 10;
@@ -48,6 +48,26 @@ public class Utils {
         }
         System.out.println(carName);
         }
+
+
+    /**
+     * this method generates random number from 1 to 10 and based on the result returns truwe or false if there is a rain.
+     * there is a 30% of beeing rain.
+     * @author: elYaro
+     * @return boolean
+     */
+    public static boolean checkIfItsRaining() {
+        Random random = new Random();
+        int randomNumber = random.nextInt(10) + 1;
+        if (randomNumber % 3 == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
     }
 
 
