@@ -51,6 +51,20 @@ public class Utils {
 
 
     /**
+     * this method generates random number from 1 to 1000 and then casing this int number to String
+     * then returns this string to the set neme method for Truck
+     * @author: elYaro
+     * @return String
+     */
+    public static String createNameForTruck(){
+        Random random = new Random();
+        int randomNumber = random.nextInt(1000) + 1;
+        return String.valueOf(randomNumber);
+    }
+
+
+
+    /**
      * this method generates random number from 1 to 10 and based on the result returns truwe or false if there is a rain.
      * there is a 30% of beeing rain.
      * @author: elYaro
